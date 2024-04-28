@@ -6,9 +6,13 @@
 - Libraries Used: Employed notistack for error handling and Chakra UI and Material UI for UI components.
   
 How to use:
+
 Clone the repository locally.
+
 Run npm install to install all the packages.
+
 Run npm start to start the application on port 3000.
+
 
  **Backend**
 - Technology Stack: Django REST Framework (DRF) was employed for building the backend API.
@@ -17,26 +21,49 @@ Run npm start to start the application on port 3000.
 - Integration: Integrated django-cors-headers to handle Cross-Origin Resource Sharing (CORS) issues.
   
 How to start the server:
+
 Clone the repository locally.
+
 Create a virtual environment by using pipenv. Run the following commands:
+
 	pip install pipenv
+ 
 	pipenv shell
+ 
 Install the dependencies:
+
 	pip install -r requirements.txt
+ 
 Create .env file.
+
 Add your MySQL database details in the .env file.
+
 For running the channels you will need redis support. Follow these steps:
+
 	Install linux subsystem for windows. You can install ubuntu latest from Microsoft Store.
+ 
 	Open the ubuntu terminal and run these commands one by one:
+ 
 		sudo apt-get update
+  
 		sudo apt-get install redis
+  
 		sudo service redis-server start
+  
 	Check if the redis is running using these codes:
+ 
 		redis-cli
+  
 		ping
+  
 	If the output is pong, redis is up and running.
+ 
 Start migrations:
+
 	python manage.py makemigrations
+ 
 	python manage.py migrate
+ 
 Start server:
+
 	python manage.py runserver
