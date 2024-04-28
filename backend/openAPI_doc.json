@@ -1,0 +1,263 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Snippets API",
+      "description": "Test description",
+      "termsOfService": "https://www.google.com/policies/terms/",
+      "contact": {
+        "email": "contact@snippets.local"
+      },
+      "license": {
+        "name": "BSD License"
+      },
+      "version": "v1"
+    },
+    "host": "127.0.0.1:8000",
+    "schemes": [
+      "http"
+    ],
+    "basePath": "/api",
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "securityDefinitions": {
+      "Basic": {
+        "type": "basic"
+      }
+    },
+    "security": [
+      {
+        "Basic": []
+      }
+    ],
+    "paths": {
+      "/chats/{chat_id}": {
+        "get": {
+          "operationId": "chats_read",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "chats"
+          ]
+        },
+        "post": {
+          "operationId": "chats_create",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "201": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "chats"
+          ]
+        },
+        "parameters": [
+          {
+            "name": "chat_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      },
+      "/group": {
+        "get": {
+          "operationId": "group_list",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "group"
+          ]
+        },
+        "post": {
+          "operationId": "group_create",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "201": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "group"
+          ]
+        },
+        "patch": {
+          "operationId": "group_partial_update",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "group"
+          ]
+        },
+        "parameters": []
+      },
+      "/group/add": {
+        "patch": {
+          "operationId": "group_add_partial_update",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "group"
+          ]
+        },
+        "parameters": []
+      },
+      "/group/profile": {
+        "patch": {
+          "operationId": "group_profile_partial_update",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "group"
+          ]
+        },
+        "parameters": []
+      },
+      "/group/remove": {
+        "patch": {
+          "operationId": "group_remove_partial_update",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "group"
+          ]
+        },
+        "parameters": []
+      },
+      "/group/rename": {
+        "patch": {
+          "operationId": "group_rename_partial_update",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "group"
+          ]
+        },
+        "parameters": []
+      },
+      "/group/search": {
+        "get": {
+          "operationId": "group_search_list",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "group"
+          ]
+        },
+        "parameters": []
+      },
+      "/group/users": {
+        "post": {
+          "operationId": "group_users_create",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "201": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "group"
+          ]
+        },
+        "parameters": []
+      },
+      "/login": {
+        "post": {
+          "operationId": "login_create",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "201": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "login"
+          ]
+        },
+        "parameters": []
+      },
+      "/register": {
+        "post": {
+          "operationId": "register_create",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "201": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "register"
+          ]
+        },
+        "parameters": []
+      },
+      "/user/search": {
+        "get": {
+          "operationId": "user_search_list",
+          "description": "",
+          "parameters": [],
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          },
+          "tags": [
+            "user"
+          ]
+        },
+        "parameters": []
+      }
+    },
+    "definitions": {
+  
+    }
+  }

@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+djangorestframework = "*"
+mysqlclient = "*"
+django-cors-headers = "*"
+djangorestframework-simplejwt = "*"
+python-socketio = "*"
+eventlet = "*"
+aiohttp = "*"
+rest-framework-simplejwt = "*"
+channels = "*"
+channels-redis = "*"
+pyjwt = "*"
+daphne = "*"
+python-dotenv = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
