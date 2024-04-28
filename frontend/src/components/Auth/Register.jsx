@@ -44,7 +44,7 @@ function Register() {
     }
 
     async function handleClick() {
-        if (user.name == "" || user.username == "" || user.password == "" || picture == "") {
+        if (user.name == "" || user.username == "" || user.password == "") {
             enqueueSnackbar("Please fill all the fields!!", {variant:"warning"});
             return;
         }
