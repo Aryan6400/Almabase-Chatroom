@@ -24,28 +24,6 @@ function Register() {
         })
     }
 
-    const resizeImage = async (pic) => {
-        setLoading(true);
-        if (!pic) {
-            setLoading(false);
-            return;
-        }
-        const options = {
-            maxSizeMB: 1,
-            maxWidthOrHeight: 144,
-            useWebWorker: true
-        }
-        try {
-            const result = await imageCompression(pic, options);
-            const newPic = new File([result], `compressed-${pic.name}`, { lastModified: result.lastModified });
-            PostDetails(pic, newPic, 0);
-
-        } catch (error) {
-            console.log(error);
-            setLoading(false);
-        }
-    }
-
     const PostDetails = (pic) => {
         const data = new FormData();
         data.append("file", pic);
@@ -121,7 +99,7 @@ function Register() {
                     <div className="picture-input-container">
                         <label >Picture:</label>
                         <div className="picture-input-div">
-                            <input type="file" accept="image/*" onChange={(e) => resizeImage(e.target.files[0])} id="form-picture" />
+                            <input type="file" accept="image/*" onChange={(e) => PostDetails(e.target.files[0])} id="form-picture" />
                         </div>
                     </div>
                     <button type="submit" onClick={handleClick} className="btn-register">SignUp</button>
