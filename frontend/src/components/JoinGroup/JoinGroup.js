@@ -5,6 +5,7 @@ import "./JoinGroup.css";
 import { useChat } from "../../context/ChatContext";
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import { useNavigate } from "react-router-dom";
+import { enqueueSnackbar } from "notistack";
 
 function JoinGroup() {
     const [name, setName] = useState("");
@@ -40,7 +41,7 @@ function JoinGroup() {
                 setShow(true);
             }
             else{
-                alert(result?.message)
+                enqueueSnackbar(result?.message, {variant:"error"})
             }
         } catch (error) {
             console.log(error);
@@ -80,7 +81,7 @@ function JoinGroup() {
                 setName('')
             }
             else{
-                alert(result?.message)
+                enqueueSnackbar(result?.message, {variant:"error"})
             }
         } catch (error) {
             console.log(error);

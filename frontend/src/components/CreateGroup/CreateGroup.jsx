@@ -6,6 +6,7 @@ import { Avatar } from "@chakra-ui/react";
 import { useChat } from "../../context/ChatContext";
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import { useNavigate } from "react-router-dom";
+import { enqueueSnackbar } from "notistack";
 
 function CreateGroup() {
   const [name, setName] = useState("");
@@ -91,7 +92,7 @@ function CreateGroup() {
         setName("");
       }
       else{
-        alert(result?.message)
+        enqueueSnackbar(result?.message, {variant:"warning"})
       }
     } catch (error) {
       console.log(error);

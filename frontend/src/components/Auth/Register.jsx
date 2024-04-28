@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Auth.css";
 import { useNavigate } from "react-router-dom";
 import { Backdrop, CircularProgress, TextField } from "@mui/material";
+import { enqueueSnackbar } from "notistack";
 
 
 function Register() {
@@ -44,7 +45,7 @@ function Register() {
 
     async function handleClick() {
         if (user.name == "" || user.username == "" || user.password == "" || picture == "") {
-            alert("Please fill all the fields!!");
+            enqueueSnackbar("Please fill all the fields!!", {variant:"warning"});
             return;
         }
         setLoading(true);
@@ -71,7 +72,7 @@ function Register() {
                 localStorage.setItem("user", JSON.stringify({user: result.user, token: result.token.access}));
                 navigate("/welcome");
             } else {
-                alert(result?.message);
+                enqueueSnackbar(result?.message, {variant:"error"});
             }
         } catch (error) {
             console.log(error);

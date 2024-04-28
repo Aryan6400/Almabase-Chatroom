@@ -6,6 +6,7 @@ import { useChat } from "../../context/ChatContext";
 import ChatsBox from "./ChatsBox/ChatsBox";
 import OptionsBar from "./OptionsBar/OptionsBar";
 import ImagePopup from "../PopupImage/PopupImage";
+import { enqueueSnackbar } from "notistack";
 
 
 function Sidebar() {
@@ -27,7 +28,7 @@ function Sidebar() {
                 setChats(result.data);
             }
             else{
-                alert(result?.message)
+                enqueueSnackbar(result?.message, {variant:"error"})
             }
         } catch (error) {
             console.error(error);

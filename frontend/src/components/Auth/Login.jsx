@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Auth.css";
 import { Backdrop, CircularProgress, TextField } from "@mui/material";
+import { enqueueSnackbar } from "notistack";
 
 
 function Login() {
@@ -22,7 +23,7 @@ function Login() {
     }
     async function handleClick() {
         if (user.username == "" || user.password == "") {
-            alert("Please fill all the credentials.");
+            enqueueSnackbar("Please fill all the credentials.", {variant:"warning"});
             return;
         }
         setLoading(true);
@@ -43,7 +44,7 @@ function Login() {
                 localStorage.setItem("user", JSON.stringify({user: result.user, token: result.token.access}));
                 navigate("/welcome");
             } else {
-                alert(result?.message);
+                enqueueSnackbar(result?.message, {variant: "error"});
             }
         } catch (error) {
             console.log(error);

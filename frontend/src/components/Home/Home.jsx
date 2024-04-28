@@ -7,6 +7,7 @@ import ScrollableFeed from "react-scrollable-feed";
 import "./Home.css";
 import { useChat } from "../../context/ChatContext";
 import { CircularProgress } from "@mui/material";
+import { enqueueSnackbar } from "notistack";
 
 const ENDPOINT = "ws://127.0.0.1:8000/ws/chat";
 let socket, selectedChatCompare;
@@ -87,7 +88,7 @@ function Home() {
         socket.send(JSON.stringify({"message": result.data}));
       }
       else {
-        alert(result?.message)
+        enqueueSnackbar(result?.message, {variant:"error"})
       }
     } catch (error) {
       console.log(error);
