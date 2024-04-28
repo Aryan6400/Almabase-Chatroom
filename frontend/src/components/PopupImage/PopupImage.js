@@ -2,7 +2,6 @@ import React from 'react';
 import Modal from 'react-modal';
 import { useDispatch, useSelector } from 'react-redux';
 import { changePopupImage, togglePopup } from '../../Features/popupImageSlice';
-import imageCompression from "browser-image-compression";
 import "./PopupImage.css";
 import { Backdrop, CircularProgress } from "@mui/material";
 import { useState } from 'react';
@@ -20,28 +19,6 @@ const ImagePopup = () => {
         dispatch(togglePopup());
         dispatch(changePopupImage(""));
     };
-
-    const resizeProfile = async (e) => {
-    //     const picture=e.target.files[0];
-    //     if (!picture) {
-    //         return;
-    //     }
-    //     setLoading(true);
-    //     const options = {
-    //         maxSizeMB: 1,
-    //         maxWidthOrHeight: 144,
-    //         useWebWorker: true
-    //     }
-    //     try {
-    //         const result = await imageCompression(picture, options);
-    //         const newPic = new File([result], `compressed-${picture.name}`, { lastModified: result.lastModified });
-    //         PostDetails(picture, 0);
-    //         PostDetails(newPic, 1);
-    //     } catch (error) {
-    //         console.log(error);
-    //         setLoading(false);
-    //     }
-    }
     
     async function changeProfile() {
     //     const data = {
@@ -107,7 +84,7 @@ const ImagePopup = () => {
                 >
                     <img className='modal-image' src={popupImage} alt='Profile Picture' />
                     <div className='change-profile-pic-div'>
-                        <input type='file' accept='image/*' onChange={resizeProfile} />
+                        <input type='file' accept='image/*' />
                         <button onClick={changeProfile}>
                             Submit
                         </button>
