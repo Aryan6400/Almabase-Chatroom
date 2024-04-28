@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Auth.css";
 import { useNavigate } from "react-router-dom";
-import imageCompression from "browser-image-compression";
 import { Backdrop, CircularProgress, TextField } from "@mui/material";
 
 
