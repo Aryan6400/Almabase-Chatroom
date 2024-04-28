@@ -1,0 +1,13 @@
+.chatDiv {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.chatBox {
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.chatBox::-webkit-scrollbar {
+    display: none;
+}

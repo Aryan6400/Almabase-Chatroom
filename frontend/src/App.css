@@ -1,0 +1,155 @@
+body {
+  width: calc(100% - 0px);
+  margin: auto;
+}
+
+#AppContainer {
+  padding: 25px 30px 40px;
+  margin: 20px 50px;
+  height: fit-content;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  max-height: 100%;
+}
+
+.App-mobile-view{
+  max-height: 100%;
+}
+
+#left-panel {
+  padding: 0 10px;
+  border-radius: 7px;
+  background-color: rgb(244, 244, 238);
+  max-height: 90vh;
+  min-width: 220px;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+#right-panel {
+  padding: 0 30px;
+  border-radius: 7px;
+  background-color: rgb(244, 244, 238);
+  max-height: 90vh;
+  height: 90vh;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+#welcome-panel {
+  padding: 0 30px;
+  border-radius: 7px;
+  background-color: rgb(244, 244, 238);
+  max-height: 90vh;
+  height: 90vh;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Min Width media queries........ */
+
+@media (min-width: 400px) {
+  .chat p {
+    width: 330px;
+  }
+}
+
+/* Max Width media queries.... */
+
+@media (max-width: 300px) {
+  .header p {
+    font-size: 0.8rem;
+  }
+
+  .header span {
+    font-size: 1rem;
+  }
+
+  .header .avatar img {
+    border-radius: 50%;
+    max-width: 30px;
+    min-width: 20px;
+  }
+
+  .chatText,
+  .myChatText {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .header p {
+    font-size: 1rem;
+  }
+
+  .header span {
+    font-size: 1.2rem;
+  }
+
+  .header .avatar img {
+    border-radius: 50%;
+    max-width: 45px;
+    min-width: 30px;
+  }
+
+  .chatText,
+  .myChatText {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .header p {
+    font-size: 1.1rem;
+  }
+
+  .header span {
+    font-size: 1.3rem;
+  }
+
+  .header .avatar img {
+    border-radius: 50%;
+    max-width: 60px;
+    min-width: 40px;
+  }
+  #right-panel{
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 450px){
+  #AppContainer {
+    margin: 20px 10px !important;
+    padding: 10px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .chatText,
+  .myChatText {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 850px){
+  #AppContainer {
+    padding: 20px;
+    margin: 20px 20px;
+  }
+  .App{
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .App {
+    grid-template-columns: 1fr 1.5fr;
+  }
+}

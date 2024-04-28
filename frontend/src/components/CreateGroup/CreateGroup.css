@@ -1,0 +1,78 @@
+.create-group-container {
+    display: flex;
+    flex-direction: column;
+    flex: 0.7;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px 10px;
+    margin: 10px;
+}
+
+.add-members {
+    width: 75%;
+}
+
+.create-group {
+    width: 100%;
+    min-width: 15rem;
+    height: 2.5rem;
+    border-radius: 17px;
+    border: 1px solid rgb(210, 210, 210);
+    box-shadow: 0 0 2px rgb(210, 210, 210);
+    text-align: center;
+    color: black;
+}
+
+.create-group-name-input{
+    width: 75%;
+    min-width: 15rem;
+    height: 2.5rem;
+    border-radius: 17px;
+    border: 1px solid rgb(210, 210, 210);
+    box-shadow: 0 0 2px rgb(210, 210, 210);
+    text-align: center;
+    color: black;
+}
+
+.create-group-search-bar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.create-group-btn {
+    background-color: rgb(145, 145, 145) !important;
+    color: white !important;
+}
+
+.create-group-btn:hover {
+    background-color: rgb(55, 55, 67) !important;
+}
+
+.selected-user-cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    width: 75%;
+    justify-content: center;
+}
+
+.selected-user-cards{
+    cursor: pointer;
+    background-color: grey;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 3px 5px;
+    color: white;
+}
+
+@media (max-width: 350px){
+    .create-group-name-input, .create-group{
+        min-width: 12rem;
+    }
+}
+

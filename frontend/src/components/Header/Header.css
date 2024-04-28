@@ -1,0 +1,97 @@
+.header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.chatName{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.name-and-avatar{
+    margin-top: 5px;
+    padding: 10px 50px 0 0;
+}
+
+.header span {
+    font-size: 1.4rem;
+    font-weight: bolder;
+}
+
+.header .avatar img, .header .avatar svg {
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+}
+
+.header .avatar svg{
+    color: rgb(200, 200, 200);
+    background-color: rgb(231, 231, 231);
+}
+
+.heading {
+    display: inline-block;
+    width: 90%;
+    margin-bottom: 0;
+    margin-top: 1.6rem;
+}
+
+.chat-return-arrow{
+    cursor: pointer;
+}
+
+.chat-return-arrow:hover{
+    box-shadow: 0 0 3px #545454;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+@media (max-width: 1000px){
+    .header .avatar img, .header .avatar svg {
+        width: 40px;
+        height: 40px;
+    }
+    .header span {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 800px){
+    .header .avatar img, .header .avatar svg {
+        width: 48px;
+        height: 48px;
+    }
+    .header span {
+        font-size: 1.35rem;
+        font-weight: bolder;
+    }
+}
+@media (max-width: 550px){
+    .header .avatar img, .header .avatar svg {
+        width: 40px;
+        height: 40px;
+    }
+    .header span {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
+@media (max-width: 500px){
+    .header .avatar img, .header .avatar svg {
+        width: 35px;
+        height: 35px;
+    }
+    .header span {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+}
+@media (max-width: 400px){
+    .header span {
+        font-size: 1.05rem;
+        font-weight: bold;
+    }
+}

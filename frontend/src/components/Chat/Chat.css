@@ -1,0 +1,132 @@
+.chat-big-box{
+    flex-direction: column;
+    display: flex;
+}
+
+.chat .avatar img, .chat .avatar svg {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.chat .avatar svg{
+    color: rgb(200, 200, 200);
+    background-color: rgb(231, 231, 231);
+}
+
+#verified-icon-svg{
+    color: blue !important;
+    background-color: none !important;
+    height: 12px !important;
+    width: 12px !important;
+}
+
+.chat-big-box p {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgb(180, 180, 180);
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    color: rgb(180, 180, 180);
+}
+
+.chat-big-box p span {
+    background-color: rgb(247,247,243);
+    padding: 0 10px;
+}
+
+.myChats {
+    max-width: 70%;
+    float: right;
+    clear: both;
+    margin: 0px 0px 20px;
+    overflow-wrap: anywhere;
+}
+
+.chats {
+    max-width: 70%;
+    float: left;
+    clear: both;
+    margin: 0px 0 20px;
+    overflow-wrap: anywhere;
+}
+
+.chatText {
+    border-radius: 0 10px 10px 10px;
+    background-color: white;
+    padding: 7px;
+    font-size: 0.9rem;
+    box-shadow: 0 0 10px rgb(206, 206, 206);
+    width: fit-content;
+}
+
+.myChatText {
+    border-radius: 10px 10px 0 10px;
+    background-color: rgba(0, 0, 255, 0.682);
+    padding: 7px 7px 7px 10px;
+    color: white;
+    font-size: 0.9rem;
+    box-shadow: 0 0 10px rgb(160, 160, 188);
+    width: fit-content;
+}
+
+.sender-name-time{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 0 0;
+}
+
+.sender-name-time span{
+    font-size: 0.65rem;
+    color: rgb(160, 160, 160);
+}
+
+.sender-name {
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+.sender-chat {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 1000px){
+    .chatText, .myChatText {
+        font-size: 0.8rem;
+    }
+    .chat .avatar img, .chat .avatar svg {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 800px){
+    .chatText, .myChatText {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 650px){
+    .chatText, .myChatText {
+        font-size: 0.85rem;
+    }
+}
+@media (max-width: 550px){
+    .chatText, .myChatText {
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 500px){
+    .chatText, .myChatText {
+        font-size: 0.75rem;
+    }
+}
+@media (max-width: 400px){
+    .chatText, .myChatText {
+        font-size: 0.7rem;
+    }
+    .chat .avatar img, .chat .avatar svg {
+        width: 20px;
+        height: 20px;
+    }
+}

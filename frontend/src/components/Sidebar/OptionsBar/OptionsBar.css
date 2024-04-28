@@ -1,0 +1,196 @@
+.options-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.options-container hr{
+    margin: 10px 20px 20px;
+}
+
+.user-profile{
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-image img, .user-image svg{
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+}
+
+.user-image svg{
+    color: rgb(200, 200, 200);
+    background-color: rgb(231, 231, 231);
+}
+
+
+.username h2{
+    cursor: pointer;
+}
+
+.options-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.options-div svg{
+    padding: 3px;
+}
+
+.options-div svg:hover{
+    cursor: pointer;
+    background-color: rgb(168, 168, 168);
+    border-radius: 100%;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#search{
+    width: 11.75rem;
+    height: 1.7rem;
+    border-radius: 27px;
+    border: 1px solid rgb(210, 210, 210);
+    box-shadow: 0 0 2px rgb(210, 210, 210);
+    text-align: center;
+    color: black;
+}
+
+.search-results{
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    z-index: 5;
+    box-shadow: 3px 3px 3px rgb(153, 153, 153);
+    width: 11.75rem;
+    min-width: 100px;
+}
+
+.searched-names{
+    display: flex;
+    gap: 5px;
+    padding: 3px;
+    margin-left: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.searched-user-image img, .searched-user-image svg{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.user-image svg{
+    color: rgb(200, 200, 200);
+    background-color: rgb(231, 231, 231);
+}
+
+.search-result-hr{
+    margin: 3px 10px !important;
+}
+
+@media (max-width: 1300px) {
+    .search-bar-and-options{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .search-bar{
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .username h2{
+        font-size: 1.25rem;
+    }
+    .user-image img, .user-image svg{
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 800px) {
+    .search-bar-and-options{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: calc(100% - 40px);
+        padding: 0 20px;
+        gap: 10px;
+    }
+    .username h2{
+        font-size: 1.5rem;
+    }
+    .user-image img, .user-image svg{
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        cursor: pointer;
+    }
+
+    #search{
+        width: 15rem;
+    }
+    
+    .search-results{
+        width: 15rem;
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 550px) {
+    .search-bar-and-options{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 450px) {
+    .username h2{
+        font-size: 1.25rem;
+    }
+    .user-image img, .user-image svg{
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 350px) {
+    #search{
+        width: 11.75rem;
+    }
+    
+    .search-results{
+        width: 11.75rem;
+        min-width: 100px;
+    }
+}

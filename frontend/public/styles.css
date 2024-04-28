@@ -1,0 +1,58 @@
+html {
+    background-color: rgb(143, 143, 143);
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0 1.2rem;
+}
+
+hr {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+::placeholder {
+    color: rgb(185, 185, 165);
+    font-size: 1rem;
+}
+
+.dark-theme-font {
+    color: white !important;
+}
+.dark-panel {
+    background-color: #202228 !important;
+}
+.dark-container{
+    background-color: #2A2C31 !important;
+}
+
+.dark-chat-box {
+    background-color: #2A2C31 !important;
+    box-shadow: 0 0 1px rgb(180, 180, 180) !important;
+}
+.dark-chat-box:hover{
+    background-color: rgb(60, 60, 60) !important;
+}
+.dark-input {
+    background-color: rgb(60, 60, 60) !important;
+    color: white !important;
+}
+.dark-chat{
+    background-color: rgb(80, 80, 80) !important;
+    color: white !important;
+    box-shadow: 0 0 3px rgb(206, 206, 206) !important;
+}
+.my-dark-chat{
+    box-shadow: 0 0 3px rgb(160, 160, 188) !important;
+}
+.dark-create-div{
+    background-color: #2A2C31 !important;
+}
+
+@media (max-width: 400px){
+    hr {
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+}
